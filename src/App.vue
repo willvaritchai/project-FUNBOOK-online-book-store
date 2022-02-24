@@ -1,14 +1,7 @@
 <script setup>
 import { ref, computed, reactive } from 'vue'
 const logoSize = 'width:242px;';
-// const course = [
-//     { classID: 1, grade: '', credit: 0 },
-//     { classID: 2, grade: '', credit: 0 },
-//     { classID: 3, grade: '', credit: 0 },
-//     { classID: 4, grade: '', credit: 0 },
-//     { classID: 5, grade: '', credit: 0 }
 
-// ]
 const courseNameItems = reactive([
     { classID: '1', courseName: '', grade: 3, credit: 2 },
     { classID: '2', courseName: '', grade: 4, credit: 3 },
@@ -20,12 +13,38 @@ const courseNameItems = reactive([
 const gradeSelection = ref([]);
 const creditSelection = ref([]);
 
+// สูตรคำนวณเกรด สมมติมี 5 วิชา 
+// เกรดที่ได้ A(4) A(4) B(3) A(4) A(4)
+// หน่วยกิต 2 3 3 2 2
+// (เกรดที่ได้ของวิชา1 x หน่วยกิตของวิชา1)+(เกรดที่ได้ของวิชา2 x หน่วยกิตของวิชา2)+...(เกรดที่ได้ของวิชา5 x หน่วยกิตของวิชา5)
+// หารด้วยผลรวมของหน่วยกิจทั้งหมด
+// (4x2)+(4x3)+(3x3)+(4x2)+(4x2) / (12)
+// 45/12 = 3.75
+const gradeCalculation = computed(() => {
+    let total = undefined;
+    let sumCredit = undefined;
+    let sumTotal = undefined;
 
-//function
-// const doSomething = () =>{
-//     for()
-// }
+    if (gradeSelection.value.length > 0) {
+        console.log(`มีการกรอกข้อมูลเกรดแล้ว, ${gradeSelection.value}`);
+        total = gradeSelection.value.map(
+            (grade, credit) => grade * creditSelection.value[credit]
+        ).reduce((p, c) => p + c, 0);
+        sumCredit = creditSelection.value.reduce((prev, curr) => prev + curr, 0);
+        //มัน return ผลลัพธ์ของเกรด * หน่วยกิตออกมาเป็น object
+    }
+    //console.log(typeof (total));
+    // let sumTotal = total.reduce((prev,curr) => prev+curr,0);
+    console.log("ผลลัพธ์ของเกรด x หน่วนกิต = " + total);
+    console.log("ผลรวมของหน่วยกิตทั้งหมด = " + sumCredit);
+    return total / sumCredit;
+})
 
+const findSumCredit = computed(() => {
+    let sumCredit = undefined;
+    sumCredit = creditSelection.value.reduce((prev, curr) => prev + curr, 0);
+    return sumCredit;
+})
 
 </script>
  
@@ -48,26 +67,6 @@ const creditSelection = ref([]);
              <span>  </span>
         </div>-->
         <div class="grid-container">
-            <div
-                class="grid grid-item grid-cols-3 gap-4 content-center"
-                v-for="(item, index) in courseNameItems"
-                :key="index"
-            >
-                <input type="text" class="border" placeholder="e.g INT101 Fundamental Programming" />
-
-                <select v-model="gradeSelection" class="border bg-white">
-                    <option value>Please select your grade</option>
-                    <option value="A">A</option>
-                    <option value="B+">B+</option>
-                    <option value="B">B</option>
-                    <option value="C+">C+</option>
-                    <option value="C">C</option>
-                    <option value="D+">D+</option>
-                    <option value="D">D</option>
-                    <option value="F">F</option>
-                </select>
-                <input type="number" class="border" placeholder="Enter course's credit" />
-            </div>
             <div class="pborder">
                 <p>check in array</p>
 
@@ -111,7 +110,7 @@ const creditSelection = ref([]);
                                     <option value="3">3(B)</option>
                                     <option value="2.5">2.5(C+)</option>
                                     <option value="2">2(C)</option>
-                                    <option value="1.5">1.5(D+)</option>
+                                    <option value="2">1.5(D+)</option>
                                     <option value="1">1(D)</option>
                                     <option value="0">0(F)</option>
                                 </select>
@@ -129,6 +128,15 @@ const creditSelection = ref([]);
                         </tr>
                     </tbody>
                 </table>
+                <div>
+                    Your Semester GPA is : {{ gradeCalculation }}
+                    <br />
+                    <!-- Total Credit is :{{ creditSelection }}
+                    <br />
+                    ผลรวมของเกรด * หน่วยกิต : {{ gradeCalculation }}
+                    <br />
+                    ผลรวมของหน่วยกิตทั้งหมด : {{ findSumCredit }}-->
+                </div>
             </div>
         </div>
     </div>
