@@ -10,13 +10,16 @@ const logoSize = 'width:242px;';
 
 // ]
 const courseNameItems = reactive([
-    { classID: '1', courseName: 'สอนนอน', grade: '4', credit: 0 },
-    { classID: '2', courseName: 'สอนนอน', grade: '4', credit: 0 },
-    { classID: '3', courseName: 'สอนนอน', grade: '4', credit: 0 },
-    { classID: '4', courseName: 'สอนนอน', grade: '4', credit: 0 },
-    { classID: '5', courseName: 'สอนนอน', grade: '4', credit: 0 }
+    { classID: '1', courseName: '', grade: 3, credit: 2 },
+    { classID: '2', courseName: '', grade: 4, credit: 3 },
+    { classID: '3', courseName: '', grade: 3, credit: 2 },
+    { classID: '4', courseName: '', grade: 3, credit: 1 },
+    { classID: '5', courseName: '', grade: 4, credit: 3 }
 
 ]);
+const gradeSelection = ref([]);
+const creditSelection = ref([]);
+
 
 //function
 // const doSomething = () =>{
@@ -46,7 +49,7 @@ const courseNameItems = reactive([
         </div>-->
         <div class="grid-container">
             <div
-                class="grid grid-item grid-cols-3 gap-4"
+                class="grid grid-item grid-cols-3 gap-4 content-center"
                 v-for="(item, index) in courseNameItems"
                 :key="index"
             >
@@ -101,16 +104,16 @@ const courseNameItems = reactive([
                                 />
                             </td>
                             <td>
-                                <select v-model="gradeSelection" class="border bg-white">
+                                <select v-model="gradeSelection[index]" class="border bg-white">
                                     <option value>Please select your grade</option>
-                                    <option value="A">A</option>
-                                    <option value="B+">B+</option>
-                                    <option value="B">B</option>
-                                    <option value="C+">C+</option>
-                                    <option value="C">C</option>
-                                    <option value="D+">D+</option>
-                                    <option value="D">D</option>
-                                    <option value="F">F</option>
+                                    <option value="4">4(A)</option>
+                                    <option value="3.5">3.5(B+)</option>
+                                    <option value="3">3(B)</option>
+                                    <option value="2.5">2.5(C+)</option>
+                                    <option value="2">2(C)</option>
+                                    <option value="1.5">1.5(D+)</option>
+                                    <option value="1">1(D)</option>
+                                    <option value="0">0(F)</option>
                                 </select>
                             </td>
                             <td>
@@ -118,6 +121,9 @@ const courseNameItems = reactive([
                                     type="number"
                                     class="border"
                                     placeholder="Enter course's credit"
+                                    min="0.5"
+                                    step="0.5"
+                                    v-model="creditSelection[index]"
                                 />
                             </td>
                         </tr>
