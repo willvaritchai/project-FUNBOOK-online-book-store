@@ -1,15 +1,9 @@
 <script setup>
 import { ref, computed, reactive } from 'vue'
 const logoSize = 'width:242px;';
+const hidden = true;
 
-const courseNameItems = reactive([
-    { classID: '1', courseName: '', grade: 3, credit: 2 },
-    { classID: '2', courseName: '', grade: 4, credit: 3 },
-    { classID: '3', courseName: '', grade: 3, credit: 2 },
-    { classID: '4', courseName: '', grade: 3, credit: 1 },
-    { classID: '5', courseName: '', grade: 4, credit: 3 }
-
-]);
+const courseNameItems = reactive([0, 0, 0, 0, 0]);
 const gradeSelection = ref([]);
 const creditSelection = ref([]);
 
@@ -37,14 +31,18 @@ const gradeCalculation = computed(() => {
     // let sumTotal = total.reduce((prev,curr) => prev+curr,0);
     console.log("ผลลัพธ์ของเกรด x หน่วนกิต = " + total);
     console.log("ผลรวมของหน่วยกิตทั้งหมด = " + sumCredit);
-    return total / sumCredit;
+    return (total / sumCredit).toFixed(2);
 })
 
-const findSumCredit = computed(() => {
-    let sumCredit = undefined;
-    sumCredit = creditSelection.value.reduce((prev, curr) => prev + curr, 0);
-    return sumCredit;
+const addRow = ref(() => {
+    courseNameItems.splice(5, 0, 0)
 })
+
+// const findSumCredit = computed(() => {
+//     let sumCredit = undefined;
+//     sumCredit = creditSelection.value.reduce((prev, curr) => prev + curr, 0);
+//     return sumCredit;
+// })
 
 </script>
  
@@ -129,8 +127,12 @@ const findSumCredit = computed(() => {
                     </tbody>
                 </table>
                 <div>
-                    Your Semester GPA is : {{ gradeCalculation }}
-                    <br />
+                    <p>Your Semester GPA is : {{ gradeCalculation }}</p>
+                    <button
+                        @click="addRow"
+                        class="py-2 px-4 rounded-lg bg-blue-500 text-white font-bold"
+                    >Add more row</button>
+
                     <!-- Total Credit is :{{ creditSelection }}
                     <br />
                     ผลรวมของเกรด * หน่วยกิต : {{ gradeCalculation }}
