@@ -163,7 +163,7 @@ const resetRow = ref(() => {
                         >The information is missing</span>
                     </p>
                     <br />
-                    <button @click="addRow" class="BaddRow">
+                    <button @click="addRow" class="BaddRow shadow-lg">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="h-12 w-12"
@@ -178,7 +178,7 @@ const resetRow = ref(() => {
                         </svg>
                     </button>
 
-                    <button @click="resetRow" class="BresetRow">
+                    <button @click="resetRow" class="BresetRow shadow-lg">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="h-12 w-12"
@@ -201,7 +201,7 @@ const resetRow = ref(() => {
                         <h1
                             class="font-bold text-3xl py-2 text-slate-800 text-left"
                         >What is a Grade Point Average (GPA)?</h1>
-                        <div class="rounded-lg border border-slate-500 p-5 text-left">
+                        <div class="rounded-lg border border-slate-100 p-5 text-left shadow-lg">
                             <p>
                                 <span
                                     class="font-bold text-slate-800"
@@ -212,7 +212,9 @@ const resetRow = ref(() => {
                         <h1
                             class="font-bold text-3xl py-2 text-slate-800 text-left"
                         >How to Calculate GPA?</h1>
-                        <div class="rounded-lg border border-slate-500 px-10 py-5 text-left">
+                        <div
+                            class="rounded-lg border border-slate-100 px-10 py-5 text-left shadow-lg"
+                        >
                             <ol class="list-decimal">
                                 <li>Multiply the point value of the letter grade by the number of credit hours.</li>
                                 <li>Total the credit hours for the term.</li>
