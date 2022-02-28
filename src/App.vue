@@ -2,7 +2,7 @@
 import { ref, computed, reactive } from 'vue'
 const logoSize = 'width:75px;';
 const studentImgSize = 'width:120px;';
-let courseNameItems = reactive([]);
+let courseNameItems = reactive([,,,]);
 const gradeSelection = ref([]);
 const creditSelection = ref([]);
 const changColor = ref(undefined)
