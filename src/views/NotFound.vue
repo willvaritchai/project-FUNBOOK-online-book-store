@@ -4,9 +4,7 @@
  
 <template>
 <div>
-    <router-link to="/">Home</router-link>
-
-    <router-view />
+    <h1>Not Found (Test)</h1>
 </div>
 </template>
  
