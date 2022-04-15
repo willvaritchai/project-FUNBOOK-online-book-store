@@ -56,7 +56,7 @@ const goToWishlist = () => myRouter.push({ name: 'Wishlist' })
                     </div>
                 </div>
             </nav>
-            <router-view/>
+            <router-view />
         </div>
     </div>
 </template>
