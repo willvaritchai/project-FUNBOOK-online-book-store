@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 defineProps({
     wishlists: {
         type: Array,
@@ -19,4 +19,4 @@ defineProps({
 </template>
  
 <style>
-</style>
+</style> -->

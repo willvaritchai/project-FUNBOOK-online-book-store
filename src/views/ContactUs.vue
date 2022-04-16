@@ -4,20 +4,16 @@
 <template>
 
 
-    <!-- Page Container -->
+
     <div class="flex items-center justify-center min-h-screen bg-white py-20">
         <div class="flex flex-col">
             <div class="flex flex-col mt-8">
-                <!-- Meet the Team -->
                 <div class="container max-w-7xl px-4">
-                    <!-- Section Header -->
                     <div class="flex flex-wrap justify-center text-center mb-24">
                         <div class="w-full lg:w-6/12 px-4">
-                            <!-- Header -->
                             <h1 class="text-gray-900 text-6xl font-bold mb-8">
                                 S2-GROUP10
                             </h1>
-                            <!-- Description -->
                             <p class="text-gray-700 text-lg font-light">
                                 INT203 | Client-side Web Programming
                             </p>
@@ -120,7 +116,7 @@
                                 <!-- Avatar -->
                                 <a href="#" class="mx-auto">
                                     <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
-                                        src="https://images.unsplash.com/photo-1634193295627-1cdddf751ebf?fit=clamp&w=400&h=400&q=80">
+                                        src="https://hooksandharmony.com/wp-content/uploads/2020/07/Rick-Astley-then.jpg">
                                 </a>
 
                                 <!-- Details -->
@@ -199,7 +195,7 @@
                                 </div>
                             </div>
                         </div>
-            
+
                         <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4 ">
                             <div class="flex flex-col">
                                 <!-- Avatar -->

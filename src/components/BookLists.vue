@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 defineProps({
     books: {
         type: Array,
@@ -25,4 +25,4 @@ defineProps({
 </template>
  
 <style>
-</style>
+</style> -->
