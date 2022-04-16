@@ -1,16 +1,8 @@
 {
     "wishlist-information":[
         {
-            "wish_id": 69,
-            "wish_book_name": "gay"
-        },
-        {
-            "wish_id": 100,
-            "wish_book_name": "tom"
-        },
-        {
-            "wish_id": 1000,
-            "wish_book_name": "les"
+            "wish_id": 0,
+            "wish_book_name": "test"
         }
     ]
 }

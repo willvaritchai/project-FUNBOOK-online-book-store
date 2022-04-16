@@ -1,10 +1,10 @@
 <script setup>
 import { onBeforeMount, ref } from 'vue';
 import BaseCard from '../components/BaseCard.vue'
-import BookLists from '../components/BookLists.vue'
-import BaseWishlist from '../components/BaseWishlist.vue'
-import NotFound from '../views/NotFound.vue'
-import ContactUs from '../views/ContactUs.vue'
+// import BookLists from '../components/BookLists.vue'
+// import BaseWishlist from '../components/BaseWishlist.vue'
+// import NotFound from '../views/NotFound.vue'
+// import ContactUs from '../views/ContactUs.vue'
 
 // const test = ref([])
 // const getTest = async () => {

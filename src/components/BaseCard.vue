@@ -1,12 +1,12 @@
 <script setup>
 import { computed, ref, onBeforeMount, onMounted, reactive } from 'vue';
-import BookLists from './BookLists.vue'
+// import BookLists from './BookLists.vue'
 import IconStar from '../components/icons/IconStar.vue'
 import ButtonVue from './Button.vue';
 import IconHeart from '../components/icons/IconHeart.vue'
 
 // ทกสอบ obj-books
-const bookInfo = reactive([
+const bookInfo = ref([
     {
         rating: 4.50,
         bookName: 'Arduino UNO พื้นฐานสำหรับงาน IOT',
@@ -57,6 +57,19 @@ const bookInfo = reactive([
     }
 ])
 
+// POST -- book
+const addWishList = async (newWishList) => {
+    const res = await fetch('http://localhost:5001/wishlist-information', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ wish_book_name: newWishList })
+    })
+    const added = await res.json()
+    bookInfo.value.push(added)
+    alert('Book has been added to your wishlist')
+}
+const alertLike = () => alert('you like this huh ?')
+
 // console.log(bookInfo[0].bookImg)
 
 
@@ -84,7 +97,7 @@ const bookName = ref(['Book Title'])
 
 
 // ทดสอบปุ่ม
-const test = () => alert('never gonna give you up !!!')
+// const test = () => alert('never gonna give you up !!!')
 </script>
  
 <template>
@@ -112,9 +125,13 @@ const test = () => alert('never gonna give you up !!!')
                 <span class="font-bold ">author: </span>{{ book.author }}
                 <hr>
                 <span class="flex">
-                    <ButtonVue :txtBtn="'FREE'" @newWishList="test" />
-                    <IconHeart />
+                    <ButtonVue :txtBtn="'FREE'" @newWishList="addWishList" />
+                    <button @click='alertLike'>
+                        <IconHeart />
+                    </button>
                 </span>
+
+
 
             </div>
 
