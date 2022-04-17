@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from '@vue/reactivity';
 import { useRouter } from 'vue-router';
-import BaseSearchBarVue from './components/BaseSearchBar.vue';
+
 import IconSearch from './components/icons/IconSearch.vue'
 
 const logoSize = 'width:85px;';
@@ -34,9 +34,7 @@ const goToWishlist = () => myRouter.push({ name: 'Wishlist' })
                                 </a>
                             </div>
                         </div>
-                        <div class="flex justify-center m-auto border rounded-lg w-85 h-10">
-                            <BaseSearchBarVue />
-                        </div>
+                        
 
 
                         <!-- secondary nav -->

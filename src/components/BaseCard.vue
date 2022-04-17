@@ -102,7 +102,7 @@ const bookName = ref(['Book Title'])
  
 <template>
     <!-- <div class="grid grid-rows-4 grid-flow-col w-full h-screen flex items-center"> -->
-    <div class="grid grid-cols-4 items-center justify-center bg-white text-gray-900">
+    <div class="grid grid-cols-4 items-center justify-center bg-white text-gray-900 rouned-lg">
         <!-- <p v-for="(book, index) in bookInfo">
             {{ book.bookName }}
         <div v-for="img, index in bookInfo" :key="index">

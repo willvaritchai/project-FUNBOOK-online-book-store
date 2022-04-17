@@ -11,7 +11,7 @@ defineProps({
 </script>
 
 <template>
-    <div>
+    <div class="w-4/5 m-auto" >
         <div>
             <!--Wishlist items goes here-->
             <div class="flex flex-col">
@@ -21,10 +21,10 @@ defineProps({
                             <table class="min-w-full border text-center">
                                 <thead class="border-b">
                                     <tr class="text-xl font-medium text-gray-900 px-6 py-4">
-                                        <th scope="col" class="border-r">Image</th>
-                                        <th scope="col" class="border-r">book-title</th>
-                                        <th scope="col" class="border-r">book-rating</th>
-                                        <th scope="col" class="px-6 py-4">action</th>
+                                        <th scope="col" class="border-r ">Image</th>
+                                        <th scope="col" class="border-r ">book-title</th>
+                                        <th scope="col" class="border-r ">book-rating</th>
+                                        <th scope="col" class="px-6 py-4 ">action</th>
                                     </tr>
                                 </thead>
                                 <tbody>

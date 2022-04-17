@@ -3,6 +3,7 @@ import { onBeforeMount, ref } from 'vue';
 import IconHeart from '../components/icons/IconHeart.vue';
 import AddB from '../components/Button.vue';
 import BaseRating from '../components/BaseRating.vue';
+import BaseSearchBar from '../components/BaseSearchBar.vue';
 
 
 
@@ -12,6 +13,7 @@ const linkWishListInfo = 'http://localhost:5001/wishlist-information'
 
 // ตัวแปรสำหรับรับค่าที่ได้จาก db
 const bookInfo = ref([])
+const searchingInfo =ref([])
 // const wishlishInfo = ref([])
 
 
@@ -56,36 +58,64 @@ onBeforeMount(async () => {
     await getBook()
 })
 
+
+const searching = (input) => {
+   // alert(input)
+    console.log(`searching :${input}`)
+    if(input===String){
+        searchingInfo.value = bookInfo.valuer((input)=>bookInfo.value.bookName==input)
+    }
+    searchingInfo.value=bookInfo.filter((value)=>input == bookInfo.value.bookName)
+    console.log(searchingInfo.value)
+}
 </script>
  
 <template>
-
-
-    <div class=" grid grid-cols-4 items-center justify-center bg-white  text-gray-900">
-
-        <div class=" mx-10 my-3 max-w-sm rounded-lg overflow-hidden shadow-lg"
-            v-for="(book, index) in bookInfo" :key="index">
-            <img class="object-cover " :src="book.bookImg" alt="Book Image" />
-            <div class="px-6 py-4 text-left">
-                <span class="flex text-xl font-bold">
-                    <BaseRating :rating="book.rating" />
-                    {{ book.rating }}
-
-                </span>
-
-                <div class="font-bold text-xl mb-2 ">
-                    <!-- ชื่อหนังสือ -->
-                    {{ book.bookName }}
+<div>
+        <div class="searching">
+                <h4 style="text-align: left;font-weight: 600;">searching</h4>
+                <div  class="  flex justify-center m-auto border rounded-lg w-85 h-10 ">
+                            <BaseSearchBar @searchMe="searching" />
                 </div>
-                <span class="font-bold ">author: </span>{{ book.author }}
+        </div>
+    
+    <div class=" w-10/12 m-auto grid grid-cols-4  items-center justify-center bg-white text-gray-900">
+
+        <div class=" mx-10 my-3 max-w-sm rounded-lg overflow-hinden shadow-lg" v-for="(book, index) in bookInfo"
+            :key="index">
+            <div>
+                <img class="object-fill h-80 w-fit rounded-lg m-auto" :src="book.bookImg" alt="Book Image" />
+            </div>
+            <div class="px-6 py-4 text-left">
+                <div>
+                    <span class="flex text-xl font-bold ">
+                        <BaseRating :rating="book.rating" />
+                        <span class="text-base py-1 px-1">{{ book.rating }}</span>
+                    </span>
+                </div>
+                     
+                <div>
+                    <div class="font-bold text-xl mb-2  ">
+                        <!-- ชื่อหนังสือ -->
+                        {{ book.bookName }}
+                    </div>
+                    <div>
+                        <span class="font-bold ">author: </span>{{ book.author }}
+                    </div>
+                </div>
+
+
                 <hr>
-                <span class="flex">
-                    <AddB :txtBtn="'FREE'" />
-                    <button @click='addWishList(book)'>
-                        <!-- ตรงนี้ทำการเอาข้อมูลส่งไปด้วย  -->
-                        <IconHeart />
-                    </button>
-                </span>
+                <div>
+                    <span class="flex">
+                        <AddB :txtBtn="'FREE'" />
+                        <button @click='addWishList(book)'>
+                            <!-- ตรงนี้ทำการเอาข้อมูลส่งไปด้วย  -->
+                            <IconHeart />
+                        </button>
+                    </span>
+                </div>
+
 
 
 
@@ -96,8 +126,16 @@ onBeforeMount(async () => {
     </div>
 
 
-
+</div>
 </template>
  
 <style>
+.searching{
+width: fit-content;
+height: fit-content;
+margin-top: 40px;
+margin-left:auto;
+margin-right: auto;
+margin-bottom:30px ;
+}
 </style>
