@@ -1,34 +1,34 @@
 <script setup>
 const teamMembers = [
     {
-        name: 'Tranter Jaskulski',
-        title: 'Founder & Specialist',
-        Linkedin: '#', twitter: '#', instagram: '#',
-        avatar: "https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?fit=clamp&w=400&h=400&q=80"
+        name: '404',
+        title: 'NOT FOUND',
+        avatar: "https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?fit=clamp&w=400&h=400&q=80",
+        contactLink: 'https://github.com/'
     },
     {
         name: 'Phiraphat Kakerd',
         title: 'ผมหิวไก่ 088',
-        Linkedin: '#', twitter: '#', instagram: '#',
-        avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr69Y_z3QzFwV1-fzUJyK_A4yI68lNvafT-w&usqp=CAU"
+        avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr69Y_z3QzFwV1-fzUJyK_A4yI68lNvafT-w&usqp=CAU",
+        contactLink: 'https://github.com/'
     },
     {
         name: 'Pattarapon Makhirun',
         title: '63130500091',
-        Linkedin: '#', twitter: '#', instagram: '#',
-        avatar: "https://hooksandharmony.com/wp-content/uploads/2020/07/Rick-Astley-then.jpg"
+        avatar: "https://hooksandharmony.com/wp-content/uploads/2020/07/Rick-Astley-then.jpg",
+        contactLink: 'https://github.com/Joe-sit'
     },
     {
         name: `Varitchai Surachaitanawat`,
         title: '63130500103-กะเพราหมูสับไข่เจียว',
-        Linkedin: '#', twitter: '#', instagram: '#',
-        avatar: "https://images.unsplash.com/photo-1635003913011-95971abba560?fit=clamp&w=400&h=400&q=80"
+        avatar: "https://it-meme.com/wp-content/uploads/2021/07/image-10-edited.png",
+        contactLink: 'https://github.com/willvaritchai'
     },
     {
-        name: `Doesn't matter`,
-        title: 'Will be fired',
-        Linkedin: '#', twitter: '#', instagram: '#',
-        avatar: "https://images.unsplash.com/photo-1635003913011-95971abba560?fit=clamp&w=400&h=400&q=80"
+        name: `404`,
+        title: 'NOT FOUND',
+        avatar: "https://images.unsplash.com/photo-1635003913011-95971abba560?fit=clamp&w=400&h=400&q=80",
+        contactLink: 'https://github.com/'
     }
 
 ]
@@ -36,13 +36,13 @@ const teamMembers = [
 </script>
  
 <template>
-    <div class="flex items-center justify-center min-h-screen bg-white py-20">
+    <div class="flex items-center justify-center min-h-screen bg-white py-30">
         <div class="flex flex-col">
-            <div class="flex flex-col mt-8">
-                <div class="container max-w-7xl px-4">
-                    <div class="flex flex-wrap justify-center text-center mb-24">
-                        <div class="w-full lg:w-6/12 px-4">
-                            <h1 class="text-gray-900 text-6xl font-bold mb-8">
+            <div class="flex flex-col mt-2">
+                <div class="container max-w-8xl px-48">
+                    <div class="flex justify-center text-center mb-20">
+                        <div class="w-full lg:w-8/12 px-4">
+                            <h1 class="text-gray-700 text-6xl font-bold mb-8">
                                 S2-GROUP10
                             </h1>
                             <p class="text-gray-700 text-lg font-light">
@@ -52,15 +52,14 @@ const teamMembers = [
                     </div>
 
                     <!-- Team Members -->
-                    <div class="flex flex-wrap">
+                    <div class="flex">
                         <!-- Member #1 -->
                         <div v-for="(member, propKey, index) in teamMembers" :key="member.name"
-                            class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                            class="md:w-7/14 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-8">
                             <div class="flex flex-col">
                                 <!-- Avatar -->
-                                <a href="#" class="mx-auto">
-                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
-                                        :src="member.avatar">
+                                <a :href="member.contactLink" class="mx-auto hover:animate-bounce">
+                                    <img class="rounded-2xl drop-shadow-md hover:drop-shadow-2xl" :src="member.avatar">
                                 </a>
 
                                 <!-- Details -->
@@ -75,26 +74,8 @@ const teamMembers = [
                                         {{ member.title }}
                                     </div>
 
-                                    <!-- Social Icons -->
-                                    <div class="flex items-center justify-center opacity-50 hover:opacity-100
-                                transition-opacity duration-300">
-                                        <!-- Linkedin -->
-                                        <a :href="member.Linkedin"
-                                            class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
-                                            <i class="mdi mdi-linkedin text-indigo-500 mx-auto mt-2"></i>
-                                        </a>
+                                    <!-- {{ member.contactLink }} -->
 
-                                        <!-- Twitter -->
-                                        <a :href="member.twitter" class="flex rounded-full hover:bg-blue-50 h-10 w-10">
-                                            <i class="mdi mdi-twitter text-blue-300 mx-auto mt-2"></i>
-                                        </a>
-
-                                        <!-- Instagram -->
-                                        <a :href="member.instagram"
-                                            class="flex rounded-full hover:bg-orange-50 h-10 w-10">
-                                            <i class="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>

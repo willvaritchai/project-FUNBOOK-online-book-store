@@ -1,9 +1,15 @@
 <script setup>
+const prop = defineProps({
+     
+})
 </script>
+
  
  
 <template>
-    <svg width="2.8em" height="2.8em" viewBox="-20 -25 256 256">
+<div style="color:gray">
+
+    <svg width="2.8em" height="2.8em" viewBox="-20 -25 256 256" >
         <path fill="currentColor"
             d="M128 220.2a13.6 13.6 0 0 1-9.9-4.1L35 133a58 
             58 0 0 1 2.2-84.2a56.5 56.5 0 0 1 41.6-14a62.8 
@@ -13,6 +19,9 @@
              4.1Zm5.6-8.3ZM75 46.7a44 44 0 0 0-29.7 11.1a45.8 45.8 0 0 0-1.8 66.7l83.1 83.1a1.9 1.9 0 0 0 2.8 0l81-81c18.2-18.2 19.9-47.5 3.8-65.3a45.8 45.8 0 0 0-66.7-1.8l-15.3 15.2a6.1 6.1 0 0 1-8.5 0l-13.1-13.1A50.3 50.3 0 0 0 75 46.7Z">
         </path>
     </svg>
+
+</div>
+    
 </template>
 
 

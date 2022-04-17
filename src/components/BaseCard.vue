@@ -6,56 +6,56 @@ import ButtonVue from './Button.vue';
 import IconHeart from '../components/icons/IconHeart.vue'
 
 // ทกสอบ obj-books
-const bookInfo = ref([
-    {
-        rating: 4.50,
-        bookName: 'Arduino UNO พื้นฐานสำหรับงาน IOT',
-        bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/262/9786162624780L.jpg?h=9793d59ad5230e538a2c6bcd36b1f6a8',
-        author: 'จีราวุท วารินทร์'
-    },
-    {
-        rating: 4.39,
-        bookName: 'พัฒนา Web Application ด้วย JavaScript และ Node.js',
-        bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/084/9786160841356L.jpg?h=fd5b13c7b8b5759783c944067214a60d',
-        author: 'บัญชา ปะสีละเตสัง'
-    },
-    {
-        rating: 4.35,
-        bookName: 'พัฒนาเว็บและเพิ่มลูกเล่นด้วย JavaScript',
-        bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/262/9786162624964L.jpg?h=e075e71e43bd742003ca1ce22644feec',
-        author: 'สุพจน์ สง่ากอง'
-    },
-    {
-        rating: 4.20,
-        bookName: 'สร้างเว็บไซต์แบบ Responsive ด้วย Bootstrap ร่วมกับ CSS และ JavaScript',
-        bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/083/9786160834938L.jpg?h=e75862e8692c0b60e5f879e6d849ad11',
-        author: 'บัญชา ปะสีละเตสัง'
-    },
-    {
-        rating: 4.10,
-        bookName: 'พัฒนา Mobile App บนระบบ Android ด้วย Kotlin',
-        bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/083/9786160837809L.jpg?h=d067f4638ee6d036c6a5f21659b64222',
-        author: 'บัญชา ปะสีละเตสัง'
-    },
-    {
-        rating: 4.00,
-        bookName: 'เขียนโปรแกรมบนฐานข้อมูล MySQL',
-        bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/080/9786160804382L.jpg?h=b71f0c741c0b4aa37ba74122ae7100ea',
-        author: 'สมพงษ์ อริสริยวงศ์'
-    },
-    {
-        rating: 4.00,
-        bookName: 'เรียนรู้ AI : Deep Learning ด้วย Python',
-        bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/906/9786169065173L.jpg?h=2f36730bcfed33287b87e98486ba418e',
-        author: 'ผศ.ดร. กอบเกียรติ สระอุบล'
-    },
-    {
-        rating: 4.00,
-        bookName: 'เรียนรู้หลักการ Data Science ด้วย Python',
-        bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/828/9786168282038L.jpg?h=e5b3d1482a0340741890e699d3923c58',
-        author: 'Joel Grus'
-    }
-])
+// const bookInfo = ref([
+//     {
+//         rating: 5,
+//         bookName: 'Arduino UNO พื้นฐานสำหรับงาน IOT',
+//         bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/262/9786162624780L.jpg?h=9793d59ad5230e538a2c6bcd36b1f6a8',
+//         author: 'จีราวุท วารินทร์'
+//     },
+//     {
+//         rating: 4.39,
+//         bookName: 'พัฒนา Web Application ด้วย JavaScript และ Node.js',
+//         bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/084/9786160841356L.jpg?h=fd5b13c7b8b5759783c944067214a60d',
+//         author: 'บัญชา ปะสีละเตสัง'
+//     },
+//     {
+//         rating: 4.35,
+//         bookName: 'พัฒนาเว็บและเพิ่มลูกเล่นด้วย JavaScript',
+//         bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/262/9786162624964L.jpg?h=e075e71e43bd742003ca1ce22644feec',
+//         author: 'สุพจน์ สง่ากอง'
+//     },
+//     {
+//         rating: 4.20,
+//         bookName: 'สร้างเว็บไซต์แบบ Responsive ด้วย Bootstrap ร่วมกับ CSS และ JavaScript',
+//         bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/083/9786160834938L.jpg?h=e75862e8692c0b60e5f879e6d849ad11',
+//         author: 'บัญชา ปะสีละเตสัง'
+//     },
+//     {
+//         rating: 4.10,
+//         bookName: 'พัฒนา Mobile App บนระบบ Android ด้วย Kotlin',
+//         bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/083/9786160837809L.jpg?h=d067f4638ee6d036c6a5f21659b64222',
+//         author: 'บัญชา ปะสีละเตสัง'
+//     },
+//     {
+//         rating: 4.00,
+//         bookName: 'เขียนโปรแกรมบนฐานข้อมูล MySQL',
+//         bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/080/9786160804382L.jpg?h=b71f0c741c0b4aa37ba74122ae7100ea',
+//         author: 'สมพงษ์ อริสริยวงศ์'
+//     },
+//     {
+//         rating: 4.00,
+//         bookName: 'เรียนรู้ AI : Deep Learning ด้วย Python',
+//         bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/906/9786169065173L.jpg?h=2f36730bcfed33287b87e98486ba418e',
+//         author: 'ผศ.ดร. กอบเกียรติ สระอุบล'
+//     },
+//     {
+//         rating: 4.00,
+//         bookName: 'เรียนรู้หลักการ Data Science ด้วย Python',
+//         bookImg: 'https://images-se-ed.com/ws/Storage/Originals/978616/828/9786168282038L.jpg?h=e5b3d1482a0340741890e699d3923c58',
+//         author: 'Joel Grus'
+//     }
+// ])
 
 // POST -- book
 const addWishList = async (newWishList) => {
@@ -102,7 +102,7 @@ const bookName = ref(['Book Title'])
  
 <template>
     <!-- <div class="grid grid-rows-4 grid-flow-col w-full h-screen flex items-center"> -->
-    <div class="grid grid-cols-4 items-center justify-center bg-white  text-gray-900">
+    <div class="grid grid-cols-4 items-center justify-center bg-white text-gray-900">
         <!-- <p v-for="(book, index) in bookInfo">
             {{ book.bookName }}
         <div v-for="img, index in bookInfo" :key="index">
