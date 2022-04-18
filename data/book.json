@@ -5,56 +5,98 @@
       "rating": 4.9,
       "bookName": "Arduino UNO พื้นฐานสำหรับงาน IOT",
       "bookImg": "https://images-se-ed.com/ws/Storage/Originals/978616/262/9786162624780L.jpg?h=9793d59ad5230e538a2c6bcd36b1f6a8",
-      "author": "จีราวุท วารินทร์"
+      "author": "จีราวุท วารินทร์",
+      "category":["IOT","IT"]
     },
     {
       "id": 2,
       "rating": 4.39,
       "bookName": "พัฒนา Web Application ด้วย JavaScript และ Node.js",
       "bookImg": "https://images-se-ed.com/ws/Storage/Originals/978616/084/9786160841356L.jpg?h=fd5b13c7b8b5759783c944067214a60d",
-      "author": "บัญชา ปะสีละเตสัง"
+      "author": "บัญชา ปะสีละเตสัง",
+      "category":["IT","JS","coding"]
     },
     {
       "id": 3,
       "rating": 4.35,
       "bookName": "พัฒนาเว็บและเพิ่มลูกเล่นด้วย JavaScript",
       "bookImg": "https://images-se-ed.com/ws/Storage/Originals/978616/262/9786162624964L.jpg?h=e075e71e43bd742003ca1ce22644feec",
-      "author": "สุพจน์ สง่ากอง"
+      "author": "สุพจน์ สง่ากอง",
+      "category":["IT","JS","พัฒนาเว็บไซต์","WEB","coding"]
     },
     {
       "id": 4,
       "rating": 4.2,
       "bookName": "สร้างเว็บไซต์แบบ Responsive ด้วย Bootstrap ร่วมกับ CSS และ JavaScript",
       "bookImg": "https://images-se-ed.com/ws/Storage/Originals/978616/083/9786160834938L.jpg?h=e75862e8692c0b60e5f879e6d849ad11",
-      "author": "บัญชา ปะสีละเตสัง"
+      "author": "บัญชา ปะสีละเตสัง",
+      "category":["IT","สร้างเว็บไซต์","BOOTSTRAP","CSS","JS","coding"]
     },
     {
       "id": 5,
       "rating": 4.1,
       "bookName": "พัฒนา Mobile App บนระบบ Android ด้วย Kotlin",
       "bookImg": "https://images-se-ed.com/ws/Storage/Originals/978616/083/9786160837809L.jpg?h=d067f4638ee6d036c6a5f21659b64222",
-      "author": "บัญชา ปะสีละเตสัง"
+      "author": "บัญชา ปะสีละเตสัง",
+      "category":["IT","mobile","android","kotlin","coding"]
     },
     {
       "id": 6,
       "rating": 5.0,
       "bookName": "เขียนโปรแกรมบนฐานข้อมูล MySQL",
       "bookImg": "https://images-se-ed.com/ws/Storage/Originals/978616/080/9786160804382L.jpg?h=b71f0c741c0b4aa37ba74122ae7100ea",
-      "author": "สมพงษ์ อริสริยวงศ์"
+      "author": "สมพงษ์ อริสริยวงศ์",
+      "category":["IT","mysql","เขียนโปรแกรม","coding"]
     },
     {
       "id": 7,
       "rating": 3.89,
       "bookName": "เรียนรู้ AI : Deep Learning ด้วย Python",
       "bookImg": "https://images-se-ed.com/ws/Storage/Originals/978616/906/9786169065173L.jpg?h=2f36730bcfed33287b87e98486ba418e",
-      "author": "ผศ.ดร. กอบเกียรติ สระอุบล"
+      "author": "ผศ.ดร. กอบเกียรติ สระอุบล",
+      "category":["IT","ai","deep","learning","python"]
+      
     },
     {
       "id": 8,
       "rating": 4.0,
       "bookName": "เรียนรู้หลักการ Data Science ด้วย Python",
       "bookImg": "https://images-se-ed.com/ws/Storage/Originals/978616/828/9786168282038L.jpg?h=e5b3d1482a0340741890e699d3923c58",
-      "author": "Joel Grus"
+      "author": "Joel Grus",
+      "category":["IT","data","science","data science","python"]
+    },
+    {
+      "id": 9,
+      "rating": 4.5,
+      "bookName": "เตรียมสอบ O-NET ม.6 ฉบับสมบูรณ์",
+      "bookImg": "https://images-se-ed.com/ws/Storage/Originals/978616/236/9786162367540L.jpg?h=fcaa80bf8c4ee7355f08414e91ca27e2",
+      "author": "ปฏิญญา นาฬิเกร์",
+      "category":["การศึกษา","โอเน็ต","education","ม.6","มัธยม"]
+    },
+    {
+      "id": 10,
+      "rating": 3.9,
+      "bookName": "คุกกี้รัน เล่ม 1 ผจญภัยในลอนดอน",
+      "bookImg": "https://images-se-ed.com/ws/Storage/Originals/978616/042/9786160423767L.jpg?h=7211eb3cc3a430986463b8bdfe2ee949",
+      "author": "Song Do Soo (ซง โดซู)",
+      "category":["หนังสือการ์ตูน","เด็ก"]
+    },
+    {
+      "id": 11,
+      "rating": 2.5,
+      "bookName": "เทรดหุ้นให้รวยด้วยกราฟเทคนิคสำหรับมือใหม่",
+      "bookImg": "https://images-se-ed.com/ws/Storage/Originals/978616/578/9786165783170L.jpg?h=16d2254cd3bfae2d4fd964024b9368d6",
+      "author": "ช.โชติวงศ์ เพ็ชญไพศิษฏ์",
+      "category":["เทรด","trade","การลงทุน","การเงิน","หุ้น","บริหาร","business"]
+    },
+    {
+      "id": 12,
+      "rating": 3.8,
+      "bookName": "ดูดวงชะตากับ พ. สุวรรณ (มงคลชีวิตประจำวันเกิด 7 วัน)",
+      "bookImg": "https://images-se-ed.com/ws/Storage/Originals/978616/716/9786167166766L.jpg?h=54e7dca94fd9b76338fb03fd93dcaba6",
+      "author": "พ.สุวรรณ",
+      "category":["ดูดวง","ชะตา","augur"]
     }
+
   ]
 }

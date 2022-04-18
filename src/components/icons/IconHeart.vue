@@ -1,14 +1,11 @@
 <script setup>
-const prop = defineProps({
-     
-})
 </script>
 
  
  
 <template>
 <div style="color:gray">
-
+<!-- ทำหน้าที่แสดง icon รูปหัวใจ สำหรับ post ข้อมูลหนังสือที่สนใจ เข้าสู่รายการ wishlist -->
     <svg width="2.8em" height="2.8em" viewBox="-20 -25 256 256" >
         <path fill="currentColor"
             d="M128 220.2a13.6 13.6 0 0 1-9.9-4.1L35 133a58 

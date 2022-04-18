@@ -9,6 +9,7 @@ defineProps({
 </script>
  
 <template>
+<!-- สำหรับกำหนดปุ่ม (แต่ ณ ตอนนี้ยัง set เป็น disabled ไว้ก่อน เพื่อแสดงราคาของหนังสือแต่ละเล่ม) -->
     <div>
         <button
             class="mt-3 inline-block px-6 py-2.5 bg-blue-600 text-white 

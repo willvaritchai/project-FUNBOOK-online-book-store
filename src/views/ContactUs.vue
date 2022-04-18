@@ -1,16 +1,17 @@
 <script setup>
+// รายการสมาชิกในทีม
 const teamMembers = [
     {
         name: '404',
         title: 'NOT FOUND',
         avatar: "https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?fit=clamp&w=400&h=400&q=80",
-        contactLink: 'https://github.com/'
+        contactLink: 'http://localhost:3000/notfound'
     },
     {
         name: 'Phiraphat Kakerd',
-        title: 'ผมหิวไก่ 088',
+        title: '63130500088',
         avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr69Y_z3QzFwV1-fzUJyK_A4yI68lNvafT-w&usqp=CAU",
-        contactLink: 'https://github.com/'
+        contactLink: 'https://github.com/Phiraphat0123'
     },
     {
         name: 'Pattarapon Makhirun',
@@ -20,7 +21,7 @@ const teamMembers = [
     },
     {
         name: `Varitchai Surachaitanawat`,
-        title: '63130500103-กะเพราหมูสับไข่เจียว',
+        title: '63130500103',
         avatar: "https://it-meme.com/wp-content/uploads/2021/07/image-10-edited.png",
         contactLink: 'https://github.com/willvaritchai'
     },
@@ -28,7 +29,7 @@ const teamMembers = [
         name: `404`,
         title: 'NOT FOUND',
         avatar: "https://images.unsplash.com/photo-1635003913011-95971abba560?fit=clamp&w=400&h=400&q=80",
-        contactLink: 'https://github.com/'
+        contactLink: 'http://localhost:3000/notfound'
     }
 
 ]
@@ -36,6 +37,7 @@ const teamMembers = [
 </script>
  
 <template>
+<!-- แสดงหน้า Contact Us ของสมาชิกทีม ซึ่งเมื่อ click ที่ภาพก็จะสามารถ link ไปหา github ของ member ได้ -->
     <div class="flex items-center justify-center min-h-screen bg-white py-30">
         <div class="flex flex-col">
             <div class="flex flex-col mt-2">
@@ -58,7 +60,7 @@ const teamMembers = [
                             class="md:w-7/14 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-8">
                             <div class="flex flex-col">
                                 <!-- Avatar -->
-                                <a :href="member.contactLink" class="mx-auto hover:animate-bounce">
+                                <a :href="member.contactLink" class="mx-auto hover:scale-125 transition-transform">
                                     <img class="rounded-2xl drop-shadow-md hover:drop-shadow-2xl" :src="member.avatar">
                                 </a>
 

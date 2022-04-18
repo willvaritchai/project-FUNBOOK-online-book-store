@@ -3,6 +3,7 @@
 </script>
  
 <template>
+<!-- component-icon สำหรับแสดง icon-star / rating ของหนังสือแต่ละเล่ม -->
     <div>
         <svg width="1.5em" height="1.5em" viewBox="0 0 72 72">
             <path fill="#FCEA2B"

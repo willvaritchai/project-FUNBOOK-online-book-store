@@ -11,9 +11,11 @@ defineProps({
 </script>
 
 <template>
+<!-- แสดงรายการหนังสือที่ user สนใจ-->
+
     <div class="w-4/5 m-auto" >
         <div>
-            <!--Wishlist items goes here-->
+            <!--Wishlist items goes here:: วน loop รายการหนังสือที่สนใจ ที่มาจากการ click "heart-icon" -->
             <div class="flex flex-col">
                 <div class="overflow-x-auto">
                     <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -43,7 +45,7 @@ defineProps({
                                             {{ items.rating }}
                                         </td>
                                         <td class="text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            <!--remove button:: ทดสอบก่อน แล้วเด่วค่อย clean code -->
+                                            <!-- button สำหรับการ remove หนังสือออกจาก wishlists -->
                                             <button
                                                 class="mt-3 inline-block px-6 py-2.5 bg-red-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
                                                 @click="$emit('removeWishList',items.id)">
